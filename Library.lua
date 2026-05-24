@@ -2491,7 +2491,7 @@
                 section:button({name = "Delete", callback = function() delfile(library.directory .. "/configs/" .. flags["config_name_text"] .. ".cfg")  library:update_config_list() end})
 
                 local section = main:column({}):section({name = "Other", size = 1, default = true})
-                section:keybind({name = "Menu bind", mode = "Toggle", callback = function(bool) window.toggle_menu(bool) end, default = true})
+                section:keybind({name = "Menu bind", mode = "Toggle", key = Enum.KeyCode.RightShift, callback = function(bool) window.toggle_menu(bool) end, default = true})
                 section:colorpicker({name = "Gradient 1", callback = function(color)                    
                     library:update_theme("1", color)
 
